@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 import TheWelcome from '../components/TheWelcome.vue'
 import Chart from 'chart.js/auto'
 import { ref } from 'vue'
@@ -44,3 +44,4 @@ export default {
     <canvas id="chart"></canvas>
   </main>
 </template>
+ -->
