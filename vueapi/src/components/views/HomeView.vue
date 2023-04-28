@@ -1,24 +1,46 @@
-A
-<script setup>
+<script>
 import TheWelcome from '../components/TheWelcome.vue'
-import { ref, onMounted } from 'vue'
+import Chart from 'chart.js/auto'
+import { ref } from 'vue'
 const name = ref('')
 async function getName() {
   let res = await fetch('https://data.cityofnewyork.us/resource/25th-nujf.json')
-  data.value = await res.json()
+  name.value = await res.json()
+  let data = name.value
+  // let sorted2019 = data2019.sort()
 
-  let 2019 = data.filter(year)
-  let sorted2019 = 2019.sort()
-  name.value = sorted2019
+  console.log(data)
+  return data
 }
-
-onMounted(() => {
-  getName()
-})
+export default{
+  async mounted() {
+    let x = await getName()
+    let a = x.map((e) => {
+      return e.nm
+    })
+    console.log(a)
+    let b = x.map((e) => {
+      return e.cnt
+    })
+    console.log(b)
+    new Chart(document.getElementbyId('chart'), {
+      type: 'bar',
+      data: {
+        labels: a,
+        datasets: [
+          {
+            label: 'Aashds',
+            data: b
+          }
+        ]
+      }
+    })
+  }
+}
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <canvas id="chart"></canvas>
   </main>
 </template>
