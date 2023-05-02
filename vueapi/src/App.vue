@@ -3,20 +3,18 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="navTab">
-    <NavTab />
+  <div>
+    <RouterLink to="/about">hgtgtg</RouterLink>
+    <RouterView />
   </div>
 </template>
 
-<script setup>
-import NavTab from '.components/NavTab.vue'
+<script>
+// import NavTab from '.components/NavTab.vue'
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <style scoped></style>
-
-  <RouterView />
-</template>
 
 <style scoped>
 header {

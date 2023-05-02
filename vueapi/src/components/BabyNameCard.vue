@@ -1,20 +1,19 @@
 <template>
-  <router-link :to="bbnmPath" class="card">
+  <router-link :to="bbPath" class="card">
     <h2>{{ babyname }}</h2>
     <h3>{{ count }}</h3>
   </router-link>
 </template>
 
-<script>
+<script setup>
 import { computed } from 'vue'
-export default {
-  name: 'BabyNameCard',
-  props: {
-    babyname: String,
-    count: Number
-  }
-}
-const bbnmPath = computed(() => {})
+props = defineProps({
+  babies: Object,
+  rnk: Number
+})
+const bbPath = computed(() => {
+  return `./BabyData/${props.babies.babyname}`
+})
 </script>
 
 <style scoped>

@@ -1,11 +1,6 @@
 <template>
   <div class="container">
-    <BabyNameCard
-      v-for="babies in babies"
-      :key="babies"
-      :count="baby.count"
-      :babyname="baby.babyname"
-    />
+    <BabyNameCard v-for="(baby, index) in babies" :key="baby.nm" :rnk="index + 1" :babies="baby" />
   </div>
 </template>
 
