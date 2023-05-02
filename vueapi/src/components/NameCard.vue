@@ -12,9 +12,9 @@
 const props = defineProps({
   name: String,
   firstname: String,
-  rank: String,
-  birthyear: String,
-  count: String
+  rank: Number,
+  birthyear: Number,
+  count: Number
 })
 </script>
 
