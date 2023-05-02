@@ -1,4 +1,4 @@
-</script>
+<!-- </script>
 <template>
   <div class="container">
     <Bar v-if="loaded" :data="chartData" />
@@ -41,3 +41,4 @@ export default {
   }
 }
 </script>
+ -->
