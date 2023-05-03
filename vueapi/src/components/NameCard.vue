@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <h2>{{ names }}</h2>
+    <h2>{{ name }}</h2>
     <h3>{{ firstname }}</h3>
     <h3>{{ rank }}</h3>
     <h3>{{ birthyear }}</h3>
@@ -12,9 +12,9 @@
 const props = defineProps({
   name: String,
   firstname: String,
-  rank: Number,
-  birthyear: Number,
-  count: Number
+  rank: String,
+  birthyear: String,
+  count: String
 })
 </script>
 
