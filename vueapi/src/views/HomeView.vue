@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <BabyNameCard v-for="(baby, index) in babies" :key="baby.nm" :rnk="index + 1" :babies="baby" />
+    <BabyNameCard v-for="(baby, index) in babies" :key="index" :babies="baby" :rnk="babies.rnk" />
+    <!-- <h2 v-for="(baby, index) in babies">{{ baby.nm }}</h2> -->
   </div>
 </template>
 
@@ -13,11 +14,11 @@ async function getBabies() {
   let data = await res.json()
   babies.value = data
 }
-onMounted(() => {
-  getBabies()
+onMounted(async () => {
+  await getBabies()
 })
 </script>
-
+<script></script>
 <style scoped>
 .container {
   width: 80vw;
