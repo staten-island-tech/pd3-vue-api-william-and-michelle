@@ -17,14 +17,14 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     },
-    {
+    /* {
       path: '/BarChart',
       name: 'BarChart',
       component: () => import('../views/BarChart.vue')
-    },
+    }, */
     {
-      path: '/BabyData',
-      name: 'BabyData',
+      path: '/BabyData/:id',
+      name: 'bbPath',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
