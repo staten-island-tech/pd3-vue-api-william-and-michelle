@@ -1,25 +1,22 @@
 <template>
-  <router-link :to="nmPath" class="card">
-    <h2>{{ name }}</h2>
-    <h3>{{ firstname }}</h3>
-    <h3>{{ rank }}</h3>
-    <h3>{{ birthyear }}</h3>
-    <h3>{{ count }}</h3>
-  </router-link>
+  <div class="card">
+    <h2>{{ names.nm }}</h2>
+    <h3>{{ names.rnk }}</h3>
+    <h3>{{ names.brth_yr }}</h3>
+    <h3>{{ names.cnt }}</h3>
+  </div>
 </template>
 
-<script setup>
-import { computed } from 'vue'
-const props = defineProps({
-  name: String,
-  firstname: String,
-  rank: String,
-  birthyear: String,
-  count: String
-})
-const nmPath = computed(() => {
-  return `/ApiData/${props.data.nm}`
-})
+<script>
+export default {
+  props: {
+    names: Object,
+    nm: String,
+    rnk: Number,
+    brth_yr: Number,
+    cnt: Number
+  }
+}
 </script>
 
 <style scoped>

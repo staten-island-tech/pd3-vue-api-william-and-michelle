@@ -3,7 +3,11 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <RouterView />
+  <div>
+    <nav>
+      <RouterLink to="/PieView"> Testing </RouterLink>
+    </nav>
+  </div>
 </template>
 
 <style scoped>
