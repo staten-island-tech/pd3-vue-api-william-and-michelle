@@ -1,5 +1,6 @@
 <template>
   <div>
+    Top 5 Popular Baby Names
     <Pie id="PieChart" :options="chartOptions" :data="chartData"></Pie>
   </div>
 </template>
