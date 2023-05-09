@@ -1,5 +1,10 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import BarChart from '../src/components/BarChart.vue'
+export default {
+  name: 'App',
+  components: { BarChart }
+}
 </script>
 
 <template>
