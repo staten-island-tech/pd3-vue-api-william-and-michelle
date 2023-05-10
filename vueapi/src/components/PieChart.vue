@@ -7,17 +7,8 @@
 
 <script>
 import { Pie } from 'vue-chartjs'
-import {
-  Chart as ChartJS,
-  Title,
-  ArcElement,
-  Tooltip,
-  Legend,
-  PieController,
-  CategoryScale,
-  LinearScale
-} from 'chart.js'
-ChartJS.register(Title, Tooltip, ArcElement, Legend, PieController, CategoryScale, LinearScale)
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
+ChartJS.register(ArcElement, Tooltip, Legend)
 
 export default {
   name: 'PieChart',
