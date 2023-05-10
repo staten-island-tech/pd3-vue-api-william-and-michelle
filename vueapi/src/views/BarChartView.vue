@@ -1,24 +1,23 @@
 <template>
   <div class="container">
-    <BabyNameCard v-for="(baby, index) in babies" :key="index" :babies="baby" :rnk="babies.rnk" />
-    <!-- <h2 v-for="(baby, index) in babies">{{ baby.nm }}</h2> -->
+    <h3>Rank of Top 10 Names in the US</h3>
+    <BarChart></BarChart>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import BabyNameCard from '../components/BabyNameCard.vue'
+import BarChart from '../components/BarChart.vue'
 const babies = ref('')
 async function getBabies() {
   let res = await fetch('https://data.cityofnewyork.us/resource/25th-nujf.json')
   let data = await res.json()
-  babies.value = data
+  console.log(data)
 }
 onMounted(async () => {
   await getBabies()
 })
 </script>
-<script></script>
 <style scoped>
 .container {
   width: 80vw;
