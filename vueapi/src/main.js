@@ -8,6 +8,10 @@ import './assets/main.css'
 
 const app = createApp(App)
 
+<<<<<<< HEAD
+=======
+/* app.use(createPinia()) */
+>>>>>>> linegraph
 app.use(router)
 
 app.mount('#app')
