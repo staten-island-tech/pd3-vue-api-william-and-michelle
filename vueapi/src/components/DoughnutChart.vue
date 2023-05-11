@@ -12,30 +12,17 @@ ChartJS.register(ArcElement, Tooltip, Legend)
 export default {
   name: 'DoughnutChart',
   components: { Doughnut },
-  data:()=> ({
-    chartData: {
-      chartOptions: {
-        responsive: true,
-
+  data: () => ({
+    chartOptions: {
+      responsive: true
     },
     loaded: false,
     chartData: {
-      labels: [
-        '1st',
-      '2nd',
-      '3rd',
-      '4th',
-      '5th',
-      '6th',
-      '7th',
-      '8th',
-      '9th',
-      '10th'
-    ],
-    datasets: [
-      {
-        label: 'Count of Each Ranked Name',
-        backgroundColor: [
+      labels: ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th'],
+      datasets: [
+        {
+          label: 'Count of Each Ranked Name',
+          backgroundColor: [
             '#b6feff',
             '#92feff',
             '#80feff',
@@ -48,13 +35,12 @@ export default {
             '#00a2a4',
             '#008283',
             '#006162'
-
-      ],
-    data: [131,109,88,71,71,60,57,53,48,43,42]
-      }
-    ]
+          ],
+          data: [131, 109, 88, 71, 71, 60, 57, 53, 48, 43, 42]
+        }
+      ]
     }
-  },
+  }),
 
   async mounted() {
     this.loaded = false
