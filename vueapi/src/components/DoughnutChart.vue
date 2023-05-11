@@ -34,9 +34,9 @@ export default {
     ],
     datasets: [
       {
-        label: 'Count of Each Ranked Name'},
-      backgroundColor: [
-      '#b6feff',
+        label: 'Count of Each Ranked Name',
+        backgroundColor: [
+            '#b6feff',
             '#92feff',
             '#80feff',
             '#6dfdff',
@@ -52,8 +52,12 @@ export default {
       ],
     data: [131,109,88,71,71,60,57,53,48,43,42]
       }
+    ]
     }
-  })
+  },
+
+  async mounted() {
+    this.loaded = false
     try {
       const { data } = await fetch('https://data.cityofnewyork.us/resource/25th-nujf.json')
       console.log(data)
