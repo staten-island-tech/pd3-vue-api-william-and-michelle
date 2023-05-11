@@ -19,17 +19,16 @@ export default {
     loaded: false,
     chartData: {
       labels: [
-        'Chloe',
-        'Olivia',
-        'Mia',
-        'Sophia',
-        'Emma',
-        'Amelia',
-        'Charlotte',
-        'Emily',
-        'Grace',
-        'Isabella',
-        'Ella'
+        '1st - Chloe',
+        '2nd - Olivia',
+        '3rd - Mia',
+        '4th - Sophia',
+        '5th - Emma',
+        '6th - Amelia',
+        '7th - Charlotte',
+        '8th - Emily',
+        '9th - Grace',
+        '10th - Isabella'
       ],
       datasets: [
         {
@@ -48,7 +47,7 @@ export default {
             '#008283',
             '#006162'
           ],
-          data: [131, 109, 88, 71, 71, 60, 57, 53, 48, 43, 42]
+          data: [131, 109, 88, 71, 71, 60, 57, 53, 48, 43]
         }
       ]
     }
